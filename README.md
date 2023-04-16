@@ -1,1 +1,4 @@
-# CV-Application
+# CV Application
+
+## Objective
+- Build first React application
