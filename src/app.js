@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import uniqid from 'uniqid'
 import Personal from "./components/personal";
+import WorkExperience from "./components/workExp";
 
 class App extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <div>
         <Personal />
+        <WorkExperience />
       </div>
     )
   }
