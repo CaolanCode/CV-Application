@@ -1,7 +1,7 @@
-import React, {Component} from "react";
-import uniqid from 'uniqid'
-import Personal from "./components/Personal"
-import WorkEdu from "./components/WorkEdu";
+import React, {Component} from "react"
+import Personal from "./components/personal"
+import WorkExp from "./components/WorkExp"
+import Education from "./components/Education"
 
 class App extends Component {
   constructor() {
@@ -12,14 +12,8 @@ class App extends Component {
     return (
       <div>
         <Personal />
-        <WorkEdu 
-          location="Company Name"
-          title="Role"
-        />
-        <WorkEdu 
-          location="University Name"
-          title="Degree"
-        />
+        <WorkExp />
+        <Education />
       </div>
     )
   }
