@@ -9,16 +9,18 @@ export default function WorkExp(props) {
       <label>Company Name</label>
       <input placeholder="Company Name" />
       <label>City</label>
-      <input  />
+      <input placeholder="City" />
       <label>To</label>
       <input placeholder="YYYY" min="1900" max={year} />
       <label>From</label>
-      <input placeholder="YYYY or Present" min="1900" max={year} />
+      <input placeholder="YYYY" min="1900" max={year} />
       <label>Role</label>
       <input placeholder="Role"  />
       <label>Skills</label>
-      <input placeholder="Skill"/>
-      <button>+</button>
+      <div>
+        <input placeholder="Skill" id="skill-input"/>
+        <button id="add-btn">+</button>
+      </div>
     </div>
   )
 }

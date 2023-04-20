@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import Personal from "./components/personal"
 import WorkExp from "./components/WorkExp"
 import Education from "./components/Education"
+import './style.css'
 
 class App extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <Personal />
         <WorkExp />
         <Education />
