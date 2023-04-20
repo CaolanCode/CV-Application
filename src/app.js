@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import uniqid from 'uniqid'
-import Personal from "./components/personal";
+import Personal from "./components/Personal"
 import WorkEdu from "./components/WorkEdu";
 
 class App extends Component {
