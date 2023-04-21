@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WorkExp(props) {
+export default function WorkExp() {
   const date = new Date()
   const year = date.getFullYear()
 

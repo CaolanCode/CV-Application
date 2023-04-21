@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Education(props) {
+export default function Education() {
   const date = new Date()
   const year = date.getFullYear()
 
