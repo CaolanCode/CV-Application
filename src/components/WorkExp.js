@@ -16,11 +16,6 @@ export default function WorkExp() {
       <input placeholder="YYYY" min="1900" max={year} />
       <label>Role</label>
       <input placeholder="Role"  />
-      <label>Skills</label>
-      <div>
-        <input placeholder="Skill" id="skill-input"/>
-        <button id="add-btn">+</button>
-      </div>
     </div>
   )
 }

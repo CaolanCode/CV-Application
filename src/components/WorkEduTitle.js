@@ -17,8 +17,10 @@ export default function WorkEduTitle(props) {
 
   return (
     <div className={props.cls}>
-      <div>{props.title}</div>
-      <button onClick={addPanel}>+</button>
+      <div className="work-edu-add">
+        <div>{props.title}</div>
+        <button onClick={addPanel}>+</button>
+      </div>
       {props.cls === "edu-container" ? edu : work}
     </div>
   )
