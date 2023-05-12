@@ -4,17 +4,18 @@ export default function Education() {
   const date = new Date()
   const year = date.getFullYear()
 
+
   return (
     <div className="edu-form">
-      <label>University Name</label>
+      <label className="input-label">University Name</label>
       <input placeholder="University Name" />
-      <label>City</label>
+      <label className="input-label">City</label>
       <input placeholder="City" />
-      <label>To</label>
+      <label className="input-label">To</label>
       <input placeholder="YYYY" min="1900" max={year} />
-      <label>From</label>
+      <label className="input-label">From</label>
       <input placeholder="YYYY" min="1900" max={year} />
-      <label>Degree</label>
+      <label className="input-label">Degree</label>
       <input placeholder="Degree"  />
     </div>
   )

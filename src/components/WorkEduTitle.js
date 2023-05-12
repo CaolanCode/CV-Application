@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Education from "./Education"
 import WorkExp from "./WorkExp"
+import shortid from "shortid";
 
 export default function WorkEduTitle(props) {
 
@@ -9,17 +10,17 @@ export default function WorkEduTitle(props) {
 
   const addPanel = () => {
     if (props.cls === "edu-container") {
-      setEdu([...edu, <Education />])
+      setEdu([...edu, <Education key={shortid.generate()} />])
     } else if (props.cls === "work-container") {
-      setWork([...work, <WorkExp />])
+      setWork([...work, <WorkExp key={shortid.generate()} />])
     }
   }
 
   return (
     <div className={props.cls}>
-      <div className="work-edu-add">
-        <div>{props.title}</div>
-        <button onClick={addPanel}>+</button>
+      <div className="add-section">
+        <div className="add-section-title">{props.title}</div>
+        <button className="add-btn" onClick={addPanel}>+</button>
       </div>
       {props.cls === "edu-container" ? edu : work}
     </div>

@@ -11,11 +11,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <Personal />
         <WorkEduTitle  title="Work Experience" cls="work-container" />
         <WorkEduTitle title="Education" cls="edu-container" />
         <Skill />
+        <div className="btn-container">
+          <button id="submit-btn">Submit</button>
+        </div>
       </div>
     )
   }

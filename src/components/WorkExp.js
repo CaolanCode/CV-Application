@@ -6,15 +6,15 @@ export default function WorkExp() {
 
   return (
     <div className="work-form">
-      <label>Company Name</label>
+      <label className="input-label">Company Name</label>
       <input placeholder="Company Name" />
-      <label>City</label>
+      <label className="input-label">City</label>
       <input placeholder="City" />
-      <label>To</label>
+      <label className="input-label">To</label>
       <input placeholder="YYYY" min="1900" max={year} />
-      <label>From</label>
+      <label className="input-label">From</label>
       <input placeholder="YYYY" min="1900" max={year} />
-      <label>Role</label>
+      <label className="input-label">Role</label>
       <input placeholder="Role"  />
     </div>
   )

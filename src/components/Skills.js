@@ -3,9 +3,9 @@ import React from "react";
 export default function Skill() {
   return (
     <div className="skill-section">
-      <div>Skills</div>
+      <div className="add-section-title">Skills</div>
       <input placeholder="Skill" />
-      <button>+</button>
+      <button className="add-btn">+</button>
     </div>
   )
 }
