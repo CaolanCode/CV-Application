@@ -1,8 +1,6 @@
 import React, {Component} from "react"
-import Personal from "./components/personal"
-import WorkExp from "./components/WorkExp"
-import Education from "./components/Education"
-import WorkEdu from "./components/WorkEdu"
+import Personal from "./components/Personal"
+import WorkEduTitle from "./components/WorkEduTitle"
 import Skill from "./components/Skills"
 import './style.css'
 
@@ -15,8 +13,8 @@ class App extends Component {
     return (
       <div>
         <Personal />
-        <WorkEdu title="Work Experience" />
-        <WorkEdu title="Education" />
+        <WorkEduTitle  title="Work Experience" cls="work-container" />
+        <WorkEduTitle title="Education" cls="edu-container" />
         <Skill />
       </div>
     )
