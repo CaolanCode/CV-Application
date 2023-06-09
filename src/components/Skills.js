@@ -4,7 +4,8 @@ export default function Skill() {
   const [skills, setSkills] = useState([])
   const [input, setInput] = useState('')
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
     const skill = document.getElementById('skill').value
     setSkills([...skills, skill])
     setInput('')

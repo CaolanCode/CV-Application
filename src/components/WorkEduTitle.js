@@ -4,7 +4,6 @@ import WorkExp from "./WorkExp"
 import shortid from "shortid";
 
 export default function WorkEduTitle(props) {
-
   const [edu, setEdu] = useState([])
   const [work, setWork] = useState([])
 
