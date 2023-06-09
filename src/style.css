@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 400;
 }
 
@@ -27,11 +27,6 @@
 }
 
 /* form sections */
-.personal-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .add-section, .skill-section {
   display: flex;
   align-items: center;
@@ -46,9 +41,6 @@
 }
 .input-label, .add-section-title{
   text-indent: 1vw;
-  background: #FFEBCD;
-  border: 1px solid white;
-  width: 10vw;
 }
 .add-section-title {
   font-weight: 700;
