@@ -8,7 +8,8 @@ export default function WorkEduTitle(props) {
   const [edu, setEdu] = useState([])
   const [work, setWork] = useState([])
 
-  const addPanel = () => {
+  const addPanel = (e) => {
+    e.preventDefault()
     if (props.cls === "edu-container") {
       setEdu([...edu, <Education key={shortid.generate()} />])
     } else if (props.cls === "work-container") {
