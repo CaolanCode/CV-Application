@@ -1,13 +1,12 @@
-import React, {forwardRef, useImperativeHandle, useState} from "react";
+import React, {useState} from "react";
 
-const Personal = forwardRef((props, ref) => {
+export default function Personal({showForm}) {
   const [firstname, setFirstname] = useState('')
   const [surname, setSurname] = useState('')
   const [role, setRole] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [linkedin, setLinkedin] = useState('')
-  const [showForm, setShowForm] = useState(true)
 
   const handleFirstnameChange = (e) => {
     setFirstname(e.target.value)
@@ -27,14 +26,6 @@ const Personal = forwardRef((props, ref) => {
   const handleLinkedinChange = (e) => {
     setLinkedin(e.target.value)
   }
-
-  const displayPersonal = () => {
-    setShowForm(false)
-  }
-
-  useImperativeHandle(ref, () => ({
-    displayPersonal: displayPersonal
-  }))
 
   return (
     <div>
@@ -65,8 +56,6 @@ const Personal = forwardRef((props, ref) => {
         )
       }
     </div>
-
   )
+}
 
-})
-export default Personal
