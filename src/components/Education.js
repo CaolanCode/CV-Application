@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function Education({onSave}) {
+export default function Education({onSave, index}) {
   const date = new Date()
   const year = date.getFullYear()
 
@@ -9,6 +9,16 @@ export default function Education({onSave}) {
   const [startDate, setStartDate] = useState("")
   const [endDate, setEndDate] = useState("")
   const [degree, setDegree] = useState("")
+
+  useEffect(() => {
+    onSave(index, {
+      uni,
+      city,
+      startDate,
+      endDate,
+      degree
+    })
+  }, [uni, city, startDate, endDate, degree, onSave, index])
 
   const handleUniChange = (e) => {
     setUni(e.target.value)

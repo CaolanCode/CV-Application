@@ -6,15 +6,24 @@ import shortid from "shortid";
 export default function WorkEduTitle(props) {
   const [edu, setEdu] = useState([])
   const [work, setWork] = useState([])
+  const [eduData, setEduData] = useState([])
+
+  const handleSaveEdu = (index, educationData) => {
+    const updatedEduData = [...eduData]
+    updatedEduData[index] = educationData
+    setEduData(updatedEduData)
+  }
 
   const addPanel = (e) => {
     e.preventDefault()
     if (props.cls === "edu-container") {
-      setEdu([...edu, <Education key={shortid.generate()} />])
+      const index = edu.length
+      setEdu([...edu, <Education key={shortid.generate()} index={index} onSave={handleSaveEdu} />])
     } else if (props.cls === "work-container") {
       setWork([...work, <WorkExp key={shortid.generate()} />])
     }
   }
+
 
   return (
     <div className={props.cls}>
