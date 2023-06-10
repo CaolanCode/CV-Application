@@ -19,9 +19,11 @@ export default function App() {
       <WorkEduTitle  title="Work Experience" cls="work-container" showForm={showForm}/>
       <WorkEduTitle title="Education" cls="edu-container" showForm={showForm} />
       <Skill showForm={showForm}/>
-      <div className="btn-container">
-        <button id="submit-btn" type="submit" onClick={handleClick}>Submit</button>
-      </div>
+      {showForm && 
+        <div className="btn-container">
+          <button id="submit-btn" type="submit" onClick={handleClick}>Submit</button>
+        </div>
+      }
     </form>
   )
 }

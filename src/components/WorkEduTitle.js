@@ -32,7 +32,6 @@ export default function WorkEduTitle({title, cls, showForm}) {
     }
   }
 
-
   return (
     <>
       {
@@ -72,7 +71,6 @@ export default function WorkEduTitle({title, cls, showForm}) {
                 )
               })
             }
-
           </div>
         )
       }
