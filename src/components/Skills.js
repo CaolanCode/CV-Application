@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {forwardRef, useImperativeHandle, useState} from "react";
 
-export default function Skill() {
+const Skill = forwardRef((props, ref) => {
   const [skills, setSkills] = useState([])
   const [input, setInput] = useState('')
+  const [showForm, setShowForm] = useState(true)
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -15,11 +16,27 @@ export default function Skill() {
     setInput(e.target.value)
   }
 
+  const displaySkills = () => {
+    setShowForm(false)
+  }
+
+  useImperativeHandle(ref, () => ({
+    displaySkills: displaySkills
+  }))
+
   return (
-    <div className="skill-section">
-      <div className="add-section-title">Skills</div>
-      <input placeholder="Skill" id="skill" value={input} onChange={handleInput} />
-      <button className="add-btn" onClick={handleClick}>+</button>
+    <div>
+      {showForm ? (
+          <div className="skill-section">
+            <div className="add-section-title">Skills</div>
+            <input placeholder="Skill" id="skill" value={input} onChange={handleInput} />
+            <button className="add-btn" onClick={handleClick}>+</button>
+          </div>
+        ) : (
+          <div>Skills: {skills.join(", ")}</div>
+        )
+      }
     </div>
   )
-}
+}) 
+export default Skill

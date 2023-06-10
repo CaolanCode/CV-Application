@@ -6,11 +6,15 @@ import './style.css'
 
 export default function App() {
   const personalRef = useRef(null)
+  const skillRef = useRef(null)
 
   const handleClick = (e) => {
     e.preventDefault()
     if(personalRef.current) {
       personalRef.current.displayPersonal()
+    }
+    if(skillRef.current) {
+      skillRef.current.displaySkills()
     }
   }
 
@@ -20,7 +24,7 @@ export default function App() {
       <Personal ref={personalRef}/>
       <WorkEduTitle  title="Work Experience" cls="work-container" />
       <WorkEduTitle title="Education" cls="edu-container" />
-      <Skill />
+      <Skill ref={skillRef}/>
       <div className="btn-container">
         <button id="submit-btn" type="submit" onClick={handleClick}>Submit</button>
       </div>
