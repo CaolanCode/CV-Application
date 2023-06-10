@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,14 @@
   "bugs": {
     "url": "https://github.com/CaolanCode/CV-Application/issues"
   },
-  "homepage": "https://github.com/CaolanCode/CV-Application#readme",
+  "homepage": "https://caolancode.github.io/CV-Application/",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/plugin-transform-react-jsx": "^7.21.0",
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.2",
     "webpack": "^5.79.0",
