@@ -16,7 +16,7 @@ export default function Skill({showForm}) {
   }
 
   return (
-    <div>
+    <>
       {showForm ? (
           <div className="skill-section">
             <div className="add-section-title">Skills</div>
@@ -27,6 +27,6 @@ export default function Skill({showForm}) {
           <div>Skills: {skills.join(", ")}</div>
         )
       }
-    </div>
+    </>
   )
 } 

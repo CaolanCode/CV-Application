@@ -28,7 +28,7 @@ export default function Personal({showForm}) {
   }
 
   return (
-    <div>
+    <>
       {
         showForm ? (
           <div className="personal-form section">
@@ -55,7 +55,7 @@ export default function Personal({showForm}) {
           </div>
         )
       }
-    </div>
+    </>
   )
 }
 
