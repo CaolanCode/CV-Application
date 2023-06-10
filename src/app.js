@@ -2,7 +2,8 @@ import React, {useState} from "react"
 import Personal from "./components/Personal"
 import WorkEduTitle from "./components/WorkEduTitle"
 import Skill from "./components/Skills"
-import './style.css'
+import './styles/index.css'
+import './styles/form.css'
 
 export default function App() {
   const [showForm, setShowForm] = useState(true)
