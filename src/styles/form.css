@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 10vw 15vw;
 }
-.personal-form input, .work-form input, .edu-form input, .add-section input, .input-label, .add-section-title {
+.personal-form input, .work-form input, .edu-form input, .add-section input, .input-label, .add-section-title, .skill-section input{
   text-indent: 1vw;
 }
 .work-form, .edu-form {
